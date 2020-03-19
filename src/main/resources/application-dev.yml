@@ -1,0 +1,33 @@
+server:
+  port: 9080
+  tomcat: 
+    max-swallow-size: -1
+  servlet:
+    context-path: /
+    compression:
+      enabled: true
+      mime-types: application/javascript,application/json,application/xml,text/html,text/xml,text/plain,text/css,image/*
+    
+spring:
+  #json 时间戳统一转换
+  jackson:
+    date-format:  yyyy-MM-dd HH:mm:ss
+    time-zone:   GMT+8
+  aop:
+    proxy-target-class: true
+  mvc:
+    static-path-pattern: /**
+  resource:
+    static-locations: classpath:/static/,classpath:/public/
+
+mqtt:
+  username: clientTest
+  password: 123456
+  url: tcp://192.168.199.249:1883
+  producer:
+    clientId: serve_producer
+    defaultTopic: topic1
+  consumer:
+    clientId: serve_consumer
+    defaultTopic: topic1
+
