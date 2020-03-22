@@ -59,7 +59,6 @@ public class MqttConfig {
      *
      * @return
      */
-    @Bean(initMethod = "")
     public MqttConnectOptions getMqttConnectOptions() {
         MqttConnectOptions mqttConnectOptions = new MqttConnectOptions();
         // 设置是否清空session,这里如果设置为false表示服务器会保留客户端的连接记录，
